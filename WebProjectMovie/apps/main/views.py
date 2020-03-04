@@ -1,13 +1,18 @@
+<<<<<<< HEAD
 from django.shortcuts import render, redirect
 from .models import Movies
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
+=======
+from django.shortcuts import render
+from .models import Movie
+>>>>>>> a002ad640f2d26dc84b2bea1e5037ef2d4a80e6c
 
 def main(request):
 	return render(request, 'main.html')
 
 def movie_list(request):
-	movies = Movies.objects.all()
+	movies = Movie.objects.all()
 
 	context = {
 		'movies': movies
