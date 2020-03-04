@@ -21,3 +21,23 @@ class CommentGenres(admin.ModelAdmin):
 @admin.register(models.Casting)
 class CommentGenres(admin.ModelAdmin):
     pass
+
+@admin.register(models.User)
+class CommentGenres(admin.ModelAdmin):
+    pass
+
+@admin.register(models.List)
+class CommentGenres(admin.ModelAdmin):
+    pass
+
+@admin.register(models.Favorite_Actor)
+class CommentGenres(admin.ModelAdmin):
+    pass
+
+@admin.register(models.Favorite_Movie)
+class CommentGenres(admin.ModelAdmin):
+    pass
+
+@admin.register(models.List_Content)
+class CommentGenres(admin.ModelAdmin):
+    pass
