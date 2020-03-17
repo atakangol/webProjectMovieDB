@@ -7,3 +7,11 @@ install:
 - pip install -r requirements.txt
 script:
 - python manage.py test apps
+deploy:
+  provider: heroku
+  api_key:
+    secure:
+    app: main
+  on:
+    repo: atakangol/webProjectMovieDB
+    branch: master
