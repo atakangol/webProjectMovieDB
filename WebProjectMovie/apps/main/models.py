@@ -50,7 +50,6 @@ class User(models.Model):
     def __str__(self):
         return (self.Uname, self.userID)
 
-
 class Favorite_Movie(models.Model):
     movieID = models.ForeignKey(Movie, on_delete=models.CASCADE)
     UserName = models.ForeignKey(User, on_delete=models.CASCADE)
