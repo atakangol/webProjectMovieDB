@@ -22,10 +22,6 @@ class CommentGenres(admin.ModelAdmin):
 class CommentGenres(admin.ModelAdmin):
     pass
 
-@admin.register(models.User)
-class CommentGenres(admin.ModelAdmin):
-    pass
-
 @admin.register(models.List)
 class CommentGenres(admin.ModelAdmin):
     pass
