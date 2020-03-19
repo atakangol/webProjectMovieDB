@@ -1,2 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MovieDB</title>
+</head>
+<body>
+    {% for movie in movies %}
+        <h2>{{ movie.movieName }}</h2>
+        <p>Year - {{ movie.movieYear }}</p>        
+    {% endfor %}
+</body>
+</html>
 
-<h1>HELLO WORLD</h1>

@@ -1,8 +1,8 @@
 from django.urls import path
-from apps.main import views
+from .views import main
 
 urlpatterns = [
-	path('', views.main, name='main'),
-    path('login', views.loginn, name='login'),
+	path('', main, name='url_main'),
+    #path('login', views.loginn, name='login'),
     #path('<int:pk>', views.main, name='main')
 ]
