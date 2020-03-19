@@ -8,7 +8,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure:
+    secure: $GITHUB_TOKEN
     app: main
   on:
     repo: atakangol/webProjectMovieDB
