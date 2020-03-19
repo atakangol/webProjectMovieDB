@@ -1,6 +1,6 @@
 from django.urls import path, include
-from apps.users import views as user_v
+from .views import register
 
 urlpatterns = [
-	path('register/', user_v.register, name='url_register'),
+	path('register/', register, name='url_register'),
 ]
