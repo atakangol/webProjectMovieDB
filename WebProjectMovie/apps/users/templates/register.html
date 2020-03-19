@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% load crispy_forms_tags %}
+    <form method='POST'>
+        {% csrf_token %}
+        <fieldset>
+            <legend>Join Today!</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <button type="submit">Sign Up</button> 
+    </form>
+    <small>Already have an account? <a href="#">Sign In</a></small>
+</body>
+</html>
