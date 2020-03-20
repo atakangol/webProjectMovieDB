@@ -10,7 +10,3 @@ def home(request):
 	return render(request, 'home.html', context)
 
 
-def loginn(request):
-    #context = {'form' : form}
-    context = {}
-    return render(request, 'login.html', context)

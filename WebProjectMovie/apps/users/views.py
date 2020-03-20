@@ -7,6 +7,6 @@ def register(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
                 form.save()
-                return redirect('main')
+                return redirect('url_login')
             
     return render(request, 'register.html', {'form':form}) 
