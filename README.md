@@ -8,20 +8,15 @@ respectively.
 
 ## Getting Started
 
-To run and check the website functionality you have to follow the next steps:
-
- **1. Open the project folder.**
-
- **2. python manage.py runserver.**
-
- **3. Open the web browser.**
-
- **4. Search for: 127.0.0.1:8000 .**
+If you want to run the website in your local machine for developing and testing you 
+have to get a project copy.
+To clone the repository you have to download it to your computer.
 
 
 ### Prerequisites
 
-To use the project you have to install the "requirements.txt"
+To use the project you have to install the "requirements.txt" located in the project repository.
+Use the following command:
 
 ```
 pip install -r requirements.txt
@@ -29,41 +24,17 @@ pip install -r requirements.txt
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+To run and check the website functionality you have to follow the next steps:
 
-Say what the step will be
+**1. Open the project folder.**
 
+**2. Run the server**
 ```
-Give the example
+python manage.py runserver
 ```
+ **3. Open the web browser.**
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+ **4. Search for: 127.0.0.1:8000 .**
 
 ## Deployment
 
