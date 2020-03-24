@@ -1,17 +1,30 @@
-# Project Title
+# Movie Database - Web Project
 
-One Paragraph of project description goes here
+The aim of our project is to build a website where people can find movie recommendations based on their favourite actor/director/category, so the Topic will be Movie recommendation.
+We’ll use themoviedb API that contains a movie database with Entities such as Movies, People(Actors/directors), Genres etc.
+We will have five entities being them Movie, People, Genre, Categories and Casting,
+where the last two will be the relation between Movie & Genre and Movie & People
+respectively.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+To run and check the website functionality you have to follow the next steps:
+
+ **1. Open the project folder.**
+
+ **2. python manage.py runserver.**
+
+ **3. Open the web browser.**
+
+ **4. Search for: 127.0.0.1:8000 .**
+
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+To use the project you have to install the "requirements.txt"
 
 ```
-Give examples
+pip install -r requirements.txt
 ```
 
 ### Installing
