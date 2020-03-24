@@ -71,9 +71,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Django](https://www.djangoproject.com/) - The web framework used
+* [Movie API](https://www.themoviedb.org/documentation/api) - API used in the project
+* [Bootstrap](https://getbootstrap.com/) - It contains CSS templates 
 
 ## Contributing
 
@@ -85,17 +85,15 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Boris Llona** [borisllona](https://github.com/borisllona)
+* **Hatice Hüma Kalaycı** [humoshi](https://github.com/humak)
+* **Mateus Martins** [mateusdaemon](https://github.com/mateusdaemon)
+* **Atakan Göl** [atakangol](https://github.com/atakangol)
+* **Marc Junyent** [jumo9999](https://github.com/jumo9999)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/atakangol/webProjectMovieDB/graphs/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
