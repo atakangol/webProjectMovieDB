@@ -75,14 +75,6 @@ Add additional notes about how to deploy this on a live system
 * [Movie API](https://www.themoviedb.org/documentation/api) - API used in the project
 * [Bootstrap](https://getbootstrap.com/) - It contains CSS templates 
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
 * **Boris Llona** [borisllona](https://github.com/borisllona)
