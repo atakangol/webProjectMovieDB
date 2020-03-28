@@ -8,7 +8,7 @@ respectively.
 
 ## Getting Started
 
-If you want to run the website in your local machine for developing and testing you 
+If you want to run the website in your local machine for developing and testing you
 have to get a project copy.
 To clone the repository you have to download it to your computer.
 
@@ -36,15 +36,24 @@ python manage.py runserver
 
  **4. Search for: 127.0.0.1:8000 .**
 
-## Deployment
+## Docker pull image
 
-Add additional notes about how to deploy this on a live system
+To download the docker image you can use the following command:
 
+```
+docker pull mjunyent/skeleton
+```
+
+To run the image in a container use the command:
+
+```
+docker run --name test -it mjunyent/skeleton
+```
 ## Built With
 
 * [Django](https://www.djangoproject.com/) - The web framework used
 * [Movie API](https://www.themoviedb.org/documentation/api) - API used in the project
-* [Bootstrap](https://getbootstrap.com/) - It contains CSS templates 
+* [Bootstrap](https://getbootstrap.com/) - It contains CSS templates
 
 ## Authors
 
@@ -59,4 +68,3 @@ See also the list of [contributors](https://github.com/atakangol/webProjectMovie
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
