@@ -52,7 +52,7 @@ docker run --name test -it mjunyent/skeleton
 
 ## Heroku website
 
-To watch the website you can search the following link:
+To watch the website you can use the following link:
 
 * [Click here](https://movie-db-web-project.herokuapp.com/)
 
