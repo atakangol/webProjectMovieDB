@@ -76,7 +76,7 @@ See also the list of [contributors](https://github.com/atakangol/webProjectMovie
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-##Development considerations
+## Development considerations
 
 For the template design we use a base.html, where we put the navbar and its style, using css, bootstrap and crispy forms.
 For extend the same layout in the others page, we use the content logic, then for it template we extend the style from the base.html file.
