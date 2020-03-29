@@ -75,3 +75,10 @@ See also the list of [contributors](https://github.com/atakangol/webProjectMovie
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+##Development considerations
+
+For the template design we use a base.html, where we put the navbar and its style, using css, bootstrap and crispy forms.
+For extend the same layout in the others page, we use the content logic, then for it template we extend the style from the base.html file.
+For the login and register, we use the Django forms, this way is much easier because Django already does everything for you, and also take care of password and username logic.
+All the css we use, we have decided to out in a folder called Static, and to be able to use in the heroku platform, as Django is not capable of handle the static files in production, we use the whitenoise app, and than set the URL for static files and its root. This way, the page in production is able of find de CSS style, otherwise wouldn't work.
