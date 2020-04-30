@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d35ce98-8b7f-4b66-a5b9-7a128f87622c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/features/register_favorite_actor.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/register_favorite_actor.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/register_favorite_movie.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/register_favorite_movie.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +99,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="651" y="1152" width="732" height="637" key="#Inspections" timestamp="1588247342621">
+      <screen x="306" y="1080" width="1366" height="768" />
+    </state>
+    <state x="651" y="1152" width="732" height="637" key="#Inspections/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588247342621" />
     <state x="480" y="1129" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588230843607">
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
