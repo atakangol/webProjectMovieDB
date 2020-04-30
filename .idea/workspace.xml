@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1d35ce98-8b7f-4b66-a5b9-7a128f87622c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/features/register_favorite_actor.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/register_favorite_actor.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/register_favorite_movie.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/register_favorite_movie.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/environment.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bDkdD5jU9uI9J4LK72ZSVIZF5I" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/features" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="webProjectMovieDB" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d35ce98-8b7f-4b66-a5b9-7a128f87622c" name="Default Changelist" comment="" />
+      <created>1588174136378</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588174136378</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="480" y="1129" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588230843607">
+      <screen x="306" y="1080" width="1366" height="768" />
+    </state>
+    <state x="480" y="1129" key="#com.intellij.execution.impl.EditConfigurationsDialog/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588230843607" />
+    <state x="638" y="1273" width="758" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588174771193">
+      <screen x="306" y="1080" width="1366" height="768" />
+    </state>
+    <state x="638" y="1273" width="758" height="396" key="#com.intellij.fileTypes.FileTypeChooser/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588174771193" />
+    <state x="779" y="1303" width="481" height="337" key="#com.intellij.tools.ToolEditorDialog" timestamp="1588230577351">
+      <screen x="306" y="1080" width="1366" height="768" />
+    </state>
+    <state x="779" y="1303" width="481" height="337" key="#com.intellij.tools.ToolEditorDialog/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588230577351" />
+    <state x="805" y="1229" width="424" height="484" key="FileChooserDialogImpl" timestamp="1588174740276">
+      <screen x="306" y="1080" width="1366" height="768" />
+    </state>
+    <state x="805" y="1229" width="424" height="484" key="FileChooserDialogImpl/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588174740276" />
+    <state x="514" y="1107" key="SettingsEditor" timestamp="1588246283123">
+      <screen x="306" y="1080" width="1366" height="768" />
+    </state>
+    <state x="514" y="1107" key="SettingsEditor/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588246283123" />
+    <state x="373" y="303" width="618" height="777" key="find.popup" timestamp="1588246315135">
+      <screen x="373" y="0" width="1547" height="1080" />
+    </state>
+    <state x="373" y="303" width="618" height="777" key="find.popup/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588246315135" />
+    <state x="685" y="1169" width="672" height="678" key="search.everywhere.popup" timestamp="1588246714913">
+      <screen x="306" y="1080" width="1366" height="768" />
+    </state>
+    <state x="685" y="1169" width="672" height="678" key="search.everywhere.popup/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588246714913" />
+  </component>
+</project>
