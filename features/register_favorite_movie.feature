@@ -8,10 +8,10 @@ I want to register the favorite movies whit its name.
 
   Scenario: Register just movie name
     Given I login as user "user" with password "password"
-    When I register restaurant
+    When I register movie
       | name        |
       | The Tavern  |
-    Then I'm viewing the details page for restaurant by "user"
+    Then I'm viewing the details page for movies by "user"
       | name        |
       | The Tavern  |
     And There are 1 movies

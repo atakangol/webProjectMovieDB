@@ -19,7 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d35ce98-8b7f-4b66-a5b9-7a128f87622c" name="Default Changelist" comment="" />
+    <list default="true" id="1d35ce98-8b7f-4b66-a5b9-7a128f87622c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebProjectMovie/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebProjectMovie/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebProjectMovie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebProjectMovie/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/register_favorite_movie.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/register_favorite_movie.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/authentication.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,12 +46,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/steps" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/users/templates/registration" />
       <recent name="$PROJECT_DIR$/features" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -96,10 +106,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="764" y="0" width="829" height="1080" key="#Inspections" timestamp="1588344470144">
-      <screen x="373" y="0" width="1547" height="1848" />
+    <state x="651" y="1152" width="829" height="1080" key="#Inspections" timestamp="1588350731707">
+      <screen x="306" y="1080" width="1366" height="768" />
     </state>
-    <state x="651" y="1152" width="732" height="637" key="#Inspections/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588247342621" />
+    <state x="651" y="1152" width="732" height="637" key="#Inspections/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588350731707" />
     <state x="764" y="0" width="829" height="1080" key="#Inspections/373.0.1547.1848@373.0.1547.1848" timestamp="1588344470144" />
     <state x="480" y="1129" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588230843607">
       <screen x="306" y="1080" width="1366" height="768" />
@@ -113,18 +123,22 @@
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
     <state x="779" y="1303" width="481" height="337" key="#com.intellij.tools.ToolEditorDialog/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588230577351" />
-    <state x="805" y="1229" width="424" height="484" key="FileChooserDialogImpl" timestamp="1588174740276">
+    <state x="805" y="1229" width="424" height="484" key="FileChooserDialogImpl" timestamp="1588349795978">
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
-    <state x="805" y="1229" width="424" height="484" key="FileChooserDialogImpl/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588174740276" />
-    <state x="514" y="1107" key="SettingsEditor" timestamp="1588246283123">
+    <state x="805" y="1229" width="424" height="484" key="FileChooserDialogImpl/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588349795978" />
+    <state x="514" y="1107" key="SettingsEditor" timestamp="1588350869730">
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
-    <state x="514" y="1107" key="SettingsEditor/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588246283123" />
+    <state x="514" y="1107" key="SettingsEditor/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588350869730" />
     <state x="373" y="303" width="618" height="777" key="find.popup" timestamp="1588246315135">
       <screen x="373" y="0" width="1547" height="1080" />
     </state>
     <state x="373" y="303" width="618" height="777" key="find.popup/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588246315135" />
+    <state x="775" y="1401" width="485" height="151" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1588350540137">
+      <screen x="306" y="1080" width="1366" height="768" />
+    </state>
+    <state x="775" y="1401" width="485" height="151" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588350540137" />
     <state x="685" y="1169" width="672" height="678" key="search.everywhere.popup" timestamp="1588246714913">
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
