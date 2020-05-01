@@ -10,14 +10,16 @@ class Person(models.Model):
     def __str__(self):
         return self.Pname
 
+
 class Movie(models.Model):
-    movieID = models.IntegerField(unique=True) ####
+    movieID = models.IntegerField(unique=True)  ####
     movieName = models.CharField(max_length=30)
     movieYear = models.IntegerField()
-    directorID = models.ForeignKey(Person, on_delete=models.CASCADE)####
+    directorID = models.ForeignKey(Person, on_delete=models.CASCADE)  ####
 
     def __str__(self):
         return self.movieName
+
 
 class Genre(models.Model):
     genreID = models.IntegerField()
@@ -26,6 +28,7 @@ class Genre(models.Model):
     def __str__(self):
         return self.genreName
 
+
 class Category(models.Model):
     movieID = models.ForeignKey(Movie, on_delete=models.CASCADE)
     genreID = models.ForeignKey(Genre, on_delete=models.CASCADE)
@@ -33,13 +36,14 @@ class Category(models.Model):
     def __str__(self):
         return (self.movieID, self.genreID)
 
-class Casting(models.Model):
-     order = models.IntegerField(unique=True)
-     personID = models.ForeignKey(Person, on_delete=models.CASCADE)
-     movieID = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
-     def __str__(self):
-         return self.order
+class Casting(models.Model):
+    order = models.IntegerField(unique=True)
+    personID = models.ForeignKey(Person, on_delete=models.CASCADE)
+    movieID = models.ForeignKey(Movie, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.order
 
 
 class Favorite_Movie(models.Model):
@@ -49,12 +53,14 @@ class Favorite_Movie(models.Model):
     def __str__(self):
         return (self.movieID, self.movieID)
 
+
 class Favorite_Actor(models.Model):
     PersonID = models.ForeignKey(Person, on_delete=models.CASCADE)
     UserName = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     def __str__(self):
         return (self.PersonID, self.UserID)
+
 
 class List(models.Model):
     ListOwner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -65,6 +71,7 @@ class List(models.Model):
 
     def __str__(self):
         return (self.ListOwner, self.ListID)
+
 
 class List_Content(models.Model):
     ListID = models.ForeignKey(List, on_delete=models.CASCADE)
