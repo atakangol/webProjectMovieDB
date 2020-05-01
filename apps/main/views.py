@@ -17,7 +17,7 @@ def home(request):
 
 class MovieCreate(LoginRequiredMixin, CreateView):
     model = Movie
-    template_name = 'apps/main/templates/form.html'
+    template_name = 'apps/main/form.html'
     form_class = MovieForm
 
     def form_valid(self, form):

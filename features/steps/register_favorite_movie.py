@@ -9,7 +9,7 @@ use_step_matcher("parse")
 @when(u'I register movie')
 def step_impl(context):
     for row in context.table:
-        context.browser.visit(context.get_url('apps/main:movie_create'))
+        context.browser.visit(context.get_url('apps.main:movie_create'))
         form = context.browser.find_by_tag('form').first
         for heading in row.headings:
             context.browser.fill(heading, row[heading])

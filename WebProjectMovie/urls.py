@@ -23,5 +23,5 @@ urlpatterns = [
     path('', include('apps.users.urls')),
     path('accounts/login/', views.LoginView.as_view(), name='login'),
     path('accounts/logout/', views.LogoutView.as_view(), name='logout'),
-    path('apps/main/', include('apps.main.urls', namespace='main')),
+    path('myMovies', include('apps.main.urls', namespace='main')),
 ]
