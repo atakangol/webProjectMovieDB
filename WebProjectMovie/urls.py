@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #path('', include('apps.main.urls')),
     path('', include('apps.users.urls')),
-    path('', include('apps.main.urls', namespace='data')),
+    path('mymovies/', include('apps.main.urls', namespace='movies')),
     path('accounts/login/', views.LoginView.as_view(), name='login'),
     path('accounts/logout/', views.LogoutView.as_view(), name='logout'),
 ]

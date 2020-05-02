@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import home, MovieCreate
 
-app_name = "data"
+app_name = "movies"
 
 urlpatterns = [
     path('', home, name='url_home'),
