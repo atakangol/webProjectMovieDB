@@ -22,10 +22,8 @@
     <list default="true" id="1d35ce98-8b7f-4b66-a5b9-7a128f87622c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebProjectMovie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebProjectMovie/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/register_favorite_movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/register_favorite_movie.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +50,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps" />
       <recent name="$PROJECT_DIR$/apps/users/templates/registration" />
       <recent name="$PROJECT_DIR$/features" />
       <recent name="$PROJECT_DIR$" />

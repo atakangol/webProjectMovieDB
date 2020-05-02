@@ -19,9 +19,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('apps.main.urls')),
+    #path('', include('apps.main.urls')),
     path('', include('apps.users.urls')),
+    path('', include('apps.main.urls', namespace='data')),
     path('accounts/login/', views.LoginView.as_view(), name='login'),
     path('accounts/logout/', views.LogoutView.as_view(), name='logout'),
-    path('myMovies', include('apps.main.urls', namespace='main')),
 ]

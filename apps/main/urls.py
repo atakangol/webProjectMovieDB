@@ -1,21 +1,13 @@
 from django.urls import path
-from django.views.generic.edit import CreateView
+from .views import home, MovieCreate
 
-from .forms import MovieForm
-from .models import Movie
-from .views import home
-
-
-app_name = "main"
+app_name = "data"
 
 urlpatterns = [
     path('', home, name='url_home'),
 
     # Create a movie, /apps/main/
     path('movie/create',
-         CreateView.as_view(
-             model=Movie,
-             template_name='apps/main/form.html',
-             form_class=MovieForm),
+         MovieCreate.as_view(),
          name='movie_create'),
 ]
