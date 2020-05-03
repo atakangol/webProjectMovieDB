@@ -16,7 +16,7 @@ def step_impl(context):
         form.find_by_value('Submit').first.click()
 
 
-@then(u'I\'m viewing the details page for movie by "{user}"')
+@then(u'I\'m viewing the details page for movies by "{user}"')
 def step_impl(context, user):
     q_list = [Q((attribute, context.table.rows[0][attribute])) for attribute in context.table.headings]
     from apps.main.models import Movie

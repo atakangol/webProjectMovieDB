@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.urls.base import reverse
 
 
 class Person(models.Model):
@@ -12,13 +13,16 @@ class Person(models.Model):
 
 
 class Movie(models.Model):
-    movieID = models.IntegerField(unique=True)  ####
+    movieID = models.IntegerField(unique=True)
     movieName = models.CharField(max_length=30)
     movieYear = models.IntegerField()
-    directorID = models.ForeignKey(Person, on_delete=models.CASCADE)  ####
+    directorID = models.ForeignKey(Person, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.movieName
+
+    def get_absolute_url(self):
+        return reverse('movies:movie_detail', kwargs={'pk': self.pk})
 
 
 class Genre(models.Model):

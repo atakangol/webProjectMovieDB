@@ -2,6 +2,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView
 
+from . import models
 from .forms import MovieForm
 from .models import Movie
 from django.contrib.auth import authenticate, login
@@ -23,3 +24,4 @@ class MovieCreate(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(MovieCreate, self).form_valid(form)
+
