@@ -1,0 +1,3 @@
+category and casting tables use the internallids instead of external api ids.
+lists will also
+nee to keep in mind
