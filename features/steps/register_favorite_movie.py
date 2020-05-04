@@ -26,5 +26,5 @@ def step_impl(context):
 
 @then(u'There are {count:n} movies')
 def step_impl(context, count):
-    from apps.main.models import Movie
-    assert count == Movie.objects.count()
+    from apps.main.models import Favorite_Movie
+    assert count == Favorite_Movie.objects.count()
