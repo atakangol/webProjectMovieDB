@@ -48,12 +48,13 @@ class Casting(models.Model):
 
 
 class Favorite_Movie(models.Model):
-    movieID = models.ForeignKey(Movie, on_delete=models.CASCADE)
-    #UserName = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    movieID = models.ForeignKey(Movie, null=True, on_delete=models.CASCADE)
+    # UserName = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     movieName = models.CharField(max_length=30, null=True)
+    favoriteCharacter = models.CharField(max_length=30, null=True)
 
     def __str__(self):
-        return self.movieName
+        return str(self.movieName)
 
     def get_absolute_url(self):
         return reverse('movies:movie_detail', kwargs={'pk': self.pk})

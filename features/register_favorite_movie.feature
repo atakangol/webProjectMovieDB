@@ -9,9 +9,9 @@ I want to register the favorite movies whit its name.
   Scenario: Register just movie name
     Given I login as user "user" with password "password"
     When I register movie
-      | movieName |
-      | Joker     |
+      | movieName | favoriteCharacter |
+      | Joker     | Joaquin Phoenix   |
     Then I'm viewing the details page for movies
-      | movieName |
-      | Joker     |
+      | movieName | favoriteCharacter |
+      | Joker     | Joaquin Phoenix   |
     And There are 1 movies
