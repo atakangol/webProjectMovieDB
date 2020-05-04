@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1d35ce98-8b7f-4b66-a5b9-7a128f87622c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/templates/movies/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/templates/movies/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/templates/movies/movies_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/templates/movies/movies_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/steps" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -122,10 +122,11 @@
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
     <state x="779" y="1303" width="481" height="337" key="#com.intellij.tools.ToolEditorDialog/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588230577351" />
-    <state x="805" y="1229" width="424" height="484" key="FileChooserDialogImpl" timestamp="1588349795978">
-      <screen x="306" y="1080" width="1366" height="768" />
+    <state x="542" y="171" width="424" height="484" key="FileChooserDialogImpl" timestamp="1588604232855">
+      <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="805" y="1229" width="424" height="484" key="FileChooserDialogImpl/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588349795978" />
+    <state x="542" y="171" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1588604232855" />
     <state x="514" y="1107" key="SettingsEditor" timestamp="1588350869730">
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
