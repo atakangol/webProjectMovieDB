@@ -53,7 +53,7 @@ class Favorite_Movie(models.Model):
     movieName = models.CharField(max_length=30, null=True)
 
     def __str__(self):
-        return str(self.movieID)
+        return self.movieName
 
     def get_absolute_url(self):
         return reverse('movies:movie_detail', kwargs={'pk': self.pk})
