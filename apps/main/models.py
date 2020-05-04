@@ -52,6 +52,7 @@ class Casting(models.Model):
 
 class Favorite_Movie(models.Model):
     movieID = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    movieName = models.CharField(max_length=30)
     UserName = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     def __str__(self):

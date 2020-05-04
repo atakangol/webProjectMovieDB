@@ -1,8 +1,8 @@
 from django.forms import ModelForm
-from apps.main.models import Movie
+from apps.main.models import Favorite_Movie
 
 
 class MovieForm(ModelForm):
     class Meta:
-        model = Movie
+        model = Favorite_Movie
         exclude = ()

@@ -1,7 +1,7 @@
 from django.urls import path
 from django.views.generic import DetailView
 
-from .models import Movie
+from .models import Favorite_Movie
 from .views import home, MovieCreate
 
 app_name = "movies"
@@ -17,7 +17,7 @@ urlpatterns = [
     # Movies details, /movies/1
     path('movies/<int:pk>',
          DetailView.as_view(
-             model=Movie,
+             model=Favorite_Movie,
              template_name='movies/movies_detail.html'),
          name='movie_detail'),
 ]

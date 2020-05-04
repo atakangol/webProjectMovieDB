@@ -19,8 +19,8 @@ def step_impl(context):
 @then(u'I\'m viewing the details page for movies')
 def step_impl(context):
     q_list = [Q((attribute, context.table.rows[0][attribute])) for attribute in context.table.headings]
-    from apps.main.models import Movie
-    movie = Movie.objects.filter(reduce(operator.and_, q_list)).get()
+    from apps.main.models import Favorite_Movie
+    movie = Favorite_Movie.objects.filter(reduce(operator.and_, q_list)).get()
     assert context.browser.url == context.get_url(movie)
 
 

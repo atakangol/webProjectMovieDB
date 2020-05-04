@@ -4,7 +4,7 @@ from django.views.generic.edit import CreateView
 
 from . import models
 from .forms import MovieForm
-from .models import Movie
+from .models import Movie, Favorite_Movie
 from django.contrib.auth import authenticate, login
 
 
@@ -17,7 +17,7 @@ def home(request):
 
 
 class MovieCreate(LoginRequiredMixin, CreateView):
-    model = Movie
+    model = Favorite_Movie
     template_name = 'movies/form.html'
     form_class = MovieForm
 
