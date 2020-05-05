@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>
-    {{ movie.movieName }}
-</h1>
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2">{{ movie.movieName }}</a>
+                <small class="text-muted">{{ movie.movieYear }}</small>
+            </div>
+            <!--
+                here is where it goes the movie image
+                <h2><a class="article-title" href="movies/movies_detail.html">Image here</a></h2>
+            -->            
+            <div class="form-group">
+                <a class="mr-2" href="/addfavorite/{{ movie.movieID }}">+ Favorite</a>      
+            </div>
+        </div>
+    </article>
 {% endblock %}

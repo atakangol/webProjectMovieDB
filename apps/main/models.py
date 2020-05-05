@@ -10,7 +10,7 @@ class Person(models.Model):
     Pbirth = models.DateTimeField()
     Ppic = models.CharField(null=True,max_length=100)
 
-    def _str_(self):
+    def __str__(self):
         return self.Pname
 
 class Movie(models.Model):
@@ -20,7 +20,7 @@ class Movie(models.Model):
     directorID = models.ForeignKey(Person, on_delete=models.CASCADE)####
     Mpic = models.CharField(null=True,max_length=100)
 
-    def _str_(self):
+    def __str__(self):
         return self.movieName
 
 
@@ -45,7 +45,7 @@ class Casting(models.Model):
     personID = models.ForeignKey(Person, on_delete=models.CASCADE)
     movieID = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
-    def _str_(self):
+    def __str__(self):
          return self.order
 
 
