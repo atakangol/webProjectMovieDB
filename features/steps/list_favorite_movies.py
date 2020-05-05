@@ -10,9 +10,9 @@ def step_impl(context):
 
 @then('I\'m viewing a list containing')
 def step_impl(context):
-    restaurant_links = context.browser.find_by_css('div#content ul li a')
+    movie_links = context.browser.find_by_css('div#content ul li a')
     for i, row in enumerate(context.table):
-        assert row['name'] == restaurant_links[i].text
+        assert row['movieName'] == movie_links[i].text
 
 
 @step('The list contains {count:n} movies')

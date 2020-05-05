@@ -1,4 +1,4 @@
-from datetime import timezone
+from datetime import timezone, datetime
 
 from django.urls import path
 from django.views.generic import DetailView, ListView
@@ -26,7 +26,7 @@ urlpatterns = [
     # List latest 4 movies: /mymovies/
     path('',
          ListView.as_view(
-             queryset=Favorite_Movie.objects.filter(date__lte=timezone.now()).order_by('-date')[:5],
+             queryset=Favorite_Movie.objects, #.filter(date__lte=datetime.now()).order_by('-date')[:5],
              context_object_name='latest_restaurant_list',
              template_name='movies/movie_list.html'),
          name='movie_list'),
