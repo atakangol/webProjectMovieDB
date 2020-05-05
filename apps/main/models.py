@@ -50,7 +50,7 @@ class Casting(models.Model):
 
 class Favorite_Movie(models.Model):
     movieID = models.ForeignKey(Movie, null=True, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
+    userID = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
     movieName = models.CharField(max_length=30, null=True)
     favoriteCharacter = models.CharField(max_length=30, null=True)
 
