@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.conf import settings
 from django.urls.base import reverse
@@ -49,7 +50,7 @@ class Casting(models.Model):
 
 class Favorite_Movie(models.Model):
     movieID = models.ForeignKey(Movie, null=True, on_delete=models.CASCADE)
-    # UserName = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
     movieName = models.CharField(max_length=30, null=True)
     favoriteCharacter = models.CharField(max_length=30, null=True)
 

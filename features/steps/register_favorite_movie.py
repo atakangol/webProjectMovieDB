@@ -6,6 +6,18 @@ from django.db.models import Q
 use_step_matcher("parse")
 
 
+@given('Exists movie registered by "{username}"')
+def step_impl(context, username):
+    from django.contrib.auth.models import User
+    user = User.objects.get(username=username)
+    from apps.main.models import Favorite_Movie
+    for row in context.table:
+        movie = Favorite_Movie(user=user)
+        for heading in row.headings:
+            setattr(movie, heading, row[heading])
+        movie.save()
+
+
 @when(u'I register movie')
 def step_impl(context):
     for row in context.table:

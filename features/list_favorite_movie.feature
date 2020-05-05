@@ -20,7 +20,7 @@ Background: There are 4 registered movies by same user
       | Titanic         |
       | Venganza        |
       | El Camino       |
-    And The list contains 5 restaurants
+    And The list contains 4 movies
 
   Scenario: List the last four
     Given Exists movie registered by "user"

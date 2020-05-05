@@ -21,13 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1d35ce98-8b7f-4b66-a5b9-7a128f87622c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebProjectMovie/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebProjectMovie/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebProjectMovie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebProjectMovie/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/list_favorite_actor.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/list_favorite_movie.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/list_favorite_movie.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/register_favorite_actor.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/authentication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/list_favorite_movies.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/list_favorite_movies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/register_favorite_movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/register_favorite_movie.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myrecommendations" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -115,10 +115,10 @@
     </state>
     <state x="651" y="1152" width="732" height="637" key="#Inspections/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588350731707" />
     <state x="764" y="0" width="829" height="1080" key="#Inspections/373.0.1547.1848@373.0.1547.1848" timestamp="1588344470144" />
-    <state x="480" y="1129" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588353494790">
+    <state x="480" y="1129" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588664891964">
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
-    <state x="480" y="1129" key="#com.intellij.execution.impl.EditConfigurationsDialog/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588353494790" />
+    <state x="480" y="1129" key="#com.intellij.execution.impl.EditConfigurationsDialog/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588664891964" />
     <state x="638" y="1273" width="758" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588578950279">
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
@@ -127,10 +127,10 @@
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
     <state x="779" y="1303" width="481" height="337" key="#com.intellij.tools.ToolEditorDialog/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588230577351" />
-    <state x="542" y="171" width="424" height="484" key="FileChooserDialogImpl" timestamp="1588604232855">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="805" y="1229" width="424" height="484" key="FileChooserDialogImpl" timestamp="1588665164838">
+      <screen x="306" y="1080" width="1366" height="768" />
     </state>
-    <state x="805" y="1229" width="424" height="484" key="FileChooserDialogImpl/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588349795978" />
+    <state x="805" y="1229" width="424" height="484" key="FileChooserDialogImpl/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588665164838" />
     <state x="542" y="171" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1588604232855" />
     <state x="514" y="1107" key="SettingsEditor" timestamp="1588350869730">
       <screen x="306" y="1080" width="1366" height="768" />
