@@ -10,11 +10,17 @@
                 <!--
                     here is where it goes the movie image
                     <h2><a class="article-title" href="movies/movies_detail.html">Image here</a></h2>
-                -->
-                
-                <div class="form-group">
-                    
-                    <a class="mr-2" href="/addfavorite/{{ movie.movieID }}">+ Favorite</a>      
+                -->                
+                <div class="form-group">                      
+                    {% if movie.movieID in favorites %}                 
+                        <small>
+                            <a class="mr-2" href="/removefavoritefromhome/{{ movie.movieID }}">Remove favorite</a>
+                        </small>
+                    {% else %}
+                        <small>
+                            <a class="mr-2" href="/addfavorite/{{ movie.movieID }}">+Favorite</a>
+                        </small>
+                    {% endif %}
                 </div>
             </div>
           </article>      

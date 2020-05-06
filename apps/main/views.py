@@ -7,17 +7,19 @@ from .models import Movie, Favorite_Movie
 from django.contrib.auth import authenticate, login
 from django import forms
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
 
 def home(request):
     movies = Movie.objects.all()
-    favorite_movies = Favorite_Movie.objects.filter(userID=request.user.id)
+    favorite_movies = Favorite_Movie.objects.filter(userID=request.user.id).values_list('movieID', flat=True)
     context = {
         'movies': movies,
         'favorites': favorite_movies 
     }
     return render(request, 'home.html', context)
 
+@login_required
 def FavoriteMovieCreate(request, pk):
     movie_clicked = Movie.objects.get(pk=pk)
     form = FavoriteMovieForm(initial={'movieID': movie_clicked,
@@ -37,18 +39,16 @@ def FavoriteMovieCreate(request, pk):
 
     return render(request, 'movies/add_favorite.html', context) 
 
+#Remove a movie from favorite movies by profile
 def RemoveFavoriteMovie(request, pk):
     movie_clicked = Movie.objects.get(pk=pk)
     movie_instance = Favorite_Movie.objects.filter(movieID=movie_clicked).delete()
     return HttpResponseRedirect('/profile')
 
+#Remove a movie from favorite movies by homepage
+def RemoveFavoriteMovieFromHome(request, pk):
+    movie_clicked = Movie.objects.get(pk=pk)
+    movie_instance = Favorite_Movie.objects.filter(movieID=movie_clicked).delete()
+    return HttpResponseRedirect('/')
 
-#class FavoriteMovieCreate(LoginRequiredMixin, CreateView):
-#    model = Favorite_Movie
-#    template_name = 'movies/add_favorite.html'
-#    form_class = FavoriteMovieForm
-#
-#    def form_valid(self, form):
-#        form.instance.user = self.request.user
-#        return super(FavoriteMovieCreate, self).form_valid(form)
 
