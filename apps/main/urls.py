@@ -9,12 +9,10 @@ app_name = "movies"
 urlpatterns = [
     path('', home, name='url_home'),
     path('addfavorite/<int:pk>', FavoriteMovieCreate, name='url_add_favorite'),
+    path('details/<int:pk>', DetailView.as_view(model=Movie, template_name='movies/movies_detail.html'), name='url_movie_detail'),
 
     # Create a movie
     #path('movie/create', AddFavoriteMovie.as_view(), name='movie_create'),
-
-    # Movies details, /movies/1
-    path('details/<int:pk>', DetailView.as_view(model=Movie, template_name='movies/movies_detail.html'), name='url_movie_detail'),
 
     # List latest 4 movies: /mymovies/
 #    path('profile/',

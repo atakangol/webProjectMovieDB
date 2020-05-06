@@ -1,5 +1,29 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
 {% block content %}
-    <h1>{{ user.username }}</h1>
+    <legend class="border-bottom mb-4">{{ user.username }}</legend>
+    <small class="text-muted">My favorite movies:</small>
+    {% for favorite in favorites %}
+        {% for movie in movies %}
+            {% if favorite.movieID_id == movie.movieID %}
+            <article class="media content-section">
+                <div class="media-body">
+                    <div class="article-metadata">
+                        <a class="mr-2" href="/details/{{ movie.movieID }}">{{ movie.movieName }}</a>
+                        <small class="text-muted">{{ movie.movieYear }}</small>
+                    </div>
+                    <a class="article-title">Favorite actor : {{ favorite.favActorID }}</a>
+                    <!--
+                        here is where it goes the movie image
+                        <h2><a class="article-title" href="movies/movies_detail.html">Image here</a></h2>
+                    -->
+                    
+                    <div class="form-group">
+                        <a class="mr-2" href="/addfavorite/{{ movie.movieID }}">Edit</a>
+                        <a class="mr-2">Remove</a>        
+                    </div>
+                </div>
+              </article>  
+            {% endif %}
+        {% endfor %}      
+    {% endfor %}
 {% endblock %}

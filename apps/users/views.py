@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import UserRegisterForm
 from django.contrib.auth.decorators import login_required
+from apps.main.models import Favorite_Movie, Movie
 
 def register(request):
     form = UserRegisterForm()
@@ -14,4 +15,10 @@ def register(request):
 
 @login_required
 def profile(request):
-        return render(request, 'profile.html')
+        favorites = Favorite_Movie.objects.filter(userID=request.user.id)
+        movies = Movie.objects.all()
+        context = {
+                'favorites':favorites,
+                'movies':movies
+        }
+        return render(request, 'profile.html', context)
