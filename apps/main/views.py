@@ -6,6 +6,7 @@ from .forms import FavoriteMovieForm
 from .models import Movie, Favorite_Movie
 from django.contrib.auth import authenticate, login
 from django import forms
+from django.http import HttpResponseRedirect
 
 
 def home(request):
@@ -35,6 +36,12 @@ def FavoriteMovieCreate(request, pk):
     }
 
     return render(request, 'movies/add_favorite.html', context) 
+
+def RemoveFavoriteMovie(request, pk):
+    movie_clicked = Movie.objects.get(pk=pk)
+    movie_instance = Favorite_Movie.objects.filter(movieID=movie_clicked).delete()
+    return HttpResponseRedirect('/profile')
+
 
 #class FavoriteMovieCreate(LoginRequiredMixin, CreateView):
 #    model = Favorite_Movie
