@@ -41,18 +41,18 @@ class Category(models.Model):
 
 
 class Casting(models.Model):
-    order = models.IntegerField(unique=False)
+    #order = models.IntegerField(unique=False)
     personID = models.ForeignKey(Person, on_delete=models.CASCADE)
     movieID = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
     def __str__(self):
-         return self.order
+         return str(self.personID)
 
 
 class Favorite_Movie(models.Model):
     movieID = models.ForeignKey(Movie, null=True, on_delete=models.CASCADE)
     userID = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
-    favActorID = models.ForeignKey(Person, null=True, on_delete=models.CASCADE)
+    favActorID = models.ForeignKey(Casting, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return str(self.movieID)

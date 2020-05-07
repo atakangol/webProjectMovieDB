@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView
 from . import models
 from .forms import FavoriteMovieForm
-from .models import Movie, Favorite_Movie
+from .models import Movie, Favorite_Movie, Casting
 from django.contrib.auth import authenticate, login
 from django import forms
 from django.http import HttpResponseRedirect
@@ -24,6 +24,7 @@ def FavoriteMovieCreate(request, pk):
     movie_clicked = Movie.objects.get(pk=pk)
     form = FavoriteMovieForm(initial={'movieID': movie_clicked,
                                     'userID': request.user})
+    form.fields['favActorID'].queryset = Casting.objects.filter(movieID=pk)
     if request.method == 'POST':
         form = FavoriteMovieForm(request.POST)
         movie_exists = Favorite_Movie.objects.filter(movieID=movie_clicked)
