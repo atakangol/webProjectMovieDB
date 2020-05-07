@@ -121,18 +121,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
-
 LOGIN_REDIRECT_URL = '/'
-LOGIN_URL='/login'
+LOGIN_URL = 'url_login'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
