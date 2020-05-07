@@ -12,7 +12,7 @@ def step_impl(context, username):
     user = User.objects.get(username=username)
     from apps.main.models import Favorite_Movie
     for row in context.table:
-        movie = Favorite_Movie(user=user)
+        movie = Favorite_Movie(userID=user)
         for heading in row.headings:
             setattr(movie, heading, row[heading])
         movie.save()

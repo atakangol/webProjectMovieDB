@@ -21,9 +21,26 @@
   <component name="ChangeListManager">
     <list default="true" id="1d35ce98-8b7f-4b66-a5b9-7a128f87622c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/templates/movies/movie_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/templates/movies/movie_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0002_auto_20200504_1737.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0003_favorite_movie_favoritecharacter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0004_favorite_movie_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0005_auto_20200505_1253.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0006_auto_20200505_1659.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0007_auto_20200505_2010.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0008_remove_favorite_movie_moviename.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0009_favorite_movie_moviename.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0010_remove_favorite_movie_moviename.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0011_auto_20200507_1105.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0012_auto_20200507_1118.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0013_auto_20200507_1119.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/templates/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/list_favorite_movie.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/list_favorite_movie.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/register_favorite_movie.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/register_favorite_movie.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/list_favorite_movies.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/list_favorite_movies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/register_favorite_movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/register_favorite_movie.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,10 +145,10 @@
     </state>
     <state x="805" y="1229" width="424" height="484" key="FileChooserDialogImpl/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588665164838" />
     <state x="542" y="171" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1588604232855" />
-    <state x="514" y="1107" key="SettingsEditor" timestamp="1588350869730">
+    <state x="514" y="1107" key="SettingsEditor" timestamp="1588690331386">
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
-    <state x="514" y="1107" key="SettingsEditor/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588350869730" />
+    <state x="514" y="1107" key="SettingsEditor/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588690331386" />
     <state x="373" y="303" width="618" height="777" key="find.popup" timestamp="1588454864010">
       <screen x="373" y="0" width="1547" height="1080" />
     </state>

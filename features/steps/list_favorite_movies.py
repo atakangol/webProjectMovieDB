@@ -17,4 +17,4 @@ def step_impl(context):
 
 @step('The list contains {count:n} movies')
 def step_impl(context, count):
-    assert count == len(context.browser.find_by_css('div#content article div div a'))
+    assert count == len(context.browser.find_by_css(''))
