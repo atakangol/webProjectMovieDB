@@ -4,7 +4,7 @@ from django.views.generic import DetailView, ListView
 from .models import Favorite_Movie, Movie
 from .views import home, FavoriteMovieCreate, RemoveFavoriteMovie, RemoveFavoriteMovieFromHome
 
-app_name = "movies"
+#app_name = "movies"
 
 urlpatterns = [
     path('', home, name='url_home'),

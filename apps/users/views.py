@@ -4,14 +4,14 @@ from django.contrib.auth.decorators import login_required
 from apps.main.models import Favorite_Movie, Movie
 
 def register(request):
-    form = UserRegisterForm()
-    if request.method == 'POST':
-        form = UserRegisterForm(request.POST)
+        form = UserRegisterForm()
+        if request.method == 'POST':
+                form = UserRegisterForm(request.POST)
         if form.is_valid():
                 form.save()
                 return redirect('url_login')
-            
-    return render(request, 'register.html', {'form':form}) 
+                
+        return render(request, 'register.html', {'form':form})
 
 @login_required
 def profile(request):
