@@ -6,8 +6,7 @@
 </h1>
 <ul>
     {% for movie in latest_movie_list %}
-        <li><a href="{% url 'movies:movie_detail' restaurant.id %}">
-            {{ movie.name }}</a></li>
+        <li><a href="{% url 'movies:movie_detail' restaurant.id %}">{{ movie.name }}</a></li>
     {% empty %}<li>Sorry, no movies registered yet.</li>
     {% endfor %}
 </ul>

@@ -21,7 +21,7 @@ def step_impl(context, username):
 @when(u'I register movie')
 def step_impl(context):
     for row in context.table:
-        context.browser.visit(context.get_url('movies:movie_create'))
+        context.browser.visit(context.get_url('/addfavorite'))
         form = context.browser.find_by_tag('form').first
         for heading in row.headings:
             context.browser.fill(heading, row[heading])

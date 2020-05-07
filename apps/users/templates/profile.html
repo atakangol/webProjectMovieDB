@@ -12,17 +12,13 @@
                         <small class="text-muted">{{ movie.movieYear }}</small>
                     </div>
                     <a class="article-title">Favorite actor : {{ favorite.favActorID }}</a>
-                    <small>
-                        <a class="ml-2" href="/addfavorite/{{ movie.movieID }}">Edit</a>
-                    </small>                    
+                    <small><a class="ml-2" href="/addfavorite/{{ movie.movieID }}">Edit</a></small>                    
                     <!--
-                        here is where it goes the movie image
+                        here is where it goes the movie's image
                         <h2><a class="article-title" href="movies/movies_detail.html">Image here</a></h2>
                     -->                    
                     <div class="form-group">
-                        <small>
-                            <a class="mr-2" href="/removefavorite/{{ movie.movieID }}">Remove favorite</a>        
-                        </small>                        
+                        <small><a class="mr-2" href="/removefavorite/{{ movie.movieID }}">Remove favorite</a></small>                        
                     </div>
                 </div>
               </article>  
