@@ -21,25 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1d35ce98-8b7f-4b66-a5b9-7a128f87622c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0002_auto_20200504_1737.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0003_favorite_movie_favoritecharacter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0004_favorite_movie_user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0005_auto_20200505_1253.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0006_auto_20200505_1659.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0007_auto_20200505_2010.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0008_remove_favorite_movie_moviename.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0009_favorite_movie_moviename.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0010_remove_favorite_movie_moviename.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0011_auto_20200507_1105.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0012_auto_20200507_1118.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/migrations/0013_auto_20200507_1119.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/users/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/templates/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/list_favorite_movie.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/list_favorite_movie.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/register_favorite_movie.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/register_favorite_movie.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/list_favorite_movies.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/list_favorite_movies.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/steps/register_favorite_movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/register_favorite_movie.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
