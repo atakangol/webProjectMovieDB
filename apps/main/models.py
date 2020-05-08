@@ -8,17 +8,18 @@ class Person(models.Model):
     PersonId = models.IntegerField(unique=True)
     Pname = models.CharField(max_length=50)
     Pbirth = models.DateTimeField()
-    Ppic = models.CharField(null=True,max_length=100)
+    Ppic = models.CharField(null=True, max_length=100)
 
     def __str__(self):
         return self.Pname
 
+
 class Movie(models.Model):
-    movieID = models.IntegerField(unique=True) ####
+    movieID = models.IntegerField(unique=True)
     movieName = models.CharField(max_length=30)
     movieYear = models.IntegerField()
-    directorID = models.ForeignKey(Person, on_delete=models.CASCADE)####
-    Mpic = models.CharField(null=True,max_length=100)
+    directorID = models.ForeignKey(Person, on_delete=models.CASCADE)
+    Mpic = models.CharField(null=True, max_length=100)
 
     def __str__(self):
         return self.movieName
@@ -41,12 +42,12 @@ class Category(models.Model):
 
 
 class Casting(models.Model):
-    #order = models.IntegerField(unique=False)
+    # order = models.IntegerField(unique=False)
     personID = models.ForeignKey(Person, on_delete=models.CASCADE)
     movieID = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
     def __str__(self):
-         return str(self.personID)
+        return str(self.personID)
 
 
 class Favorite_Movie(models.Model):

@@ -6,20 +6,20 @@ I want to list my favorite movies.
 Background: There are 4 registered movies by same user
     Given Exists a user "user" with password "password"
     And Exists movie registered by "user"
-      | movieName       |
-      | Joker           |
-      | Titanic         |
-      | Venganza        |
-      | El Camino       |
+      | movieName       | Pname             | user  |
+      | Joker           | Joaquim Phoenix   | user  |
+      | Titanic         | Leonardo Dicaprio | user  |
+      | Venganza        | Liam Neeson       | user  |
+      | El Camino       | Aaron Paul        | user  |
 
   Scenario: List the last four
     When I list movies
     Then I'm viewing a list containing
-      | movieName       |
-      | Joker           |
-      | Titanic         |
-      | Venganza        |
-      | El Camino       |
+      | movieName       | Pname             | user  |
+      | Joker           | Joaquim Phoenix   | user  |
+      | Titanic         | Leonardo Dicaprio | user  |
+      | Venganza        | Liam Neeson       | user  |
+      | El Camino       | Aaron Paul        | user  |
     And The list contains 4 movies
 
 #  Scenario: List the last four

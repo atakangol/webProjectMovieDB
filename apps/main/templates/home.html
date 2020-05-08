@@ -17,8 +17,8 @@
                             <a class="mr-2" href="/removefavoritefromhome/{{ movie.movieID }}">Remove favorite</a>
                         </small>
                     {% else %}
-                        <small>
-                            <a class="mr-2" href="/addfavorite/{{ movie.movieID }}">+Favorite</a>
+                        <small id="fav">
+                            <a value="Favorite" class="mr-2" href="/addfavorite/{{ movie.movieID }}">+Favorite</a>
                         </small>
                     {% endif %}
                 </div>

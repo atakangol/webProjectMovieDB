@@ -20,12 +20,15 @@ def step_impl(context, username):
 
 @when(u'I register movie')
 def step_impl(context):
-    for row in context.table:
-        context.browser.visit(context.get_url('/addfavorite'))
-        form = context.browser.find_by_tag('form').first
-        for heading in row.headings:
-            context.browser.fill(heading, row[heading])
-        form.find_by_value('Submit').first.click()
+    context.browser.visit(context.get_url(''))
+    form = context.browser.find_by_id('fav').first
+    form.find_by_value('Favorite').first.click()
+#    for row in context.table:
+#        context.browser.visit(context.get_url('/addfavorite'))
+#        form = context.browser.find_by_tag('form').first
+#        for heading in row.headings:
+#            context.browser.fill(heading, row[heading])
+#        form.find_by_value('Submit').first.click()
 
 
 @then(u'I\'m viewing the details page for movies')
