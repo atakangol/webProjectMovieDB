@@ -12,15 +12,27 @@ import apps.main.models as m
 api_key = "6d61b3e2ab08b90b76aba55d68fd4fac"
 #dont know how to put secrets exactly
 
-def all_genres():
+def all_genres(delete=True):
+    if (delete):
+        genres = m.Genre.objects.all()
+        #print(genres)
+        for genre in genres:
+            #print(genre)
+            genre.delete()
+
+    genre_names = []
+    genres = m.Genre.objects.all()
+    for i in genres:
+        genre_names.append(i.genreName)
     req = requests.get("https://api.themoviedb.org/3/genre/movie/list?api_key={}&language=en-US".format(api_key))
 
     response = req.json()
     #print(response)
-    genre_names = []
+    
     #print("all the genres in the database:\n")
     for i in response["genres"]:
-        genre_names.append(i["name"])
+        if(i["name"] not in genre_names):
+            genre_names.append(i["name"])
 
     #print(genre_names)
 
@@ -33,10 +45,10 @@ def top_films_txt():
 
     top_film_ids = []
     f = open("./api tests and trials/film_ids.txt","w")
-    for i in range(1,11):
+    for i in range(1,6):
 
 
-        req = requests.get("https://api.themoviedb.org/3/movie/top_rated?api_key={}&language=en-US&page={}".format(api_key,i))
+        req = requests.get("https://api.themoviedb.org/3/movie/popular?api_key={}&language=en-US&page={}".format(api_key,i))
         response = req.json()
         #print(response)
         for k in response["results"]:
@@ -51,171 +63,209 @@ def top_films_txt():
     f.close()
 
 def actors_txt():
-    f = open("./api tests and trials/film_ids.txt","r")
-    people_ids = []
-    for movie_id in f:
-        #print(int(movie_id))
+    top_film_ids = []
+    f = open("./api tests and trials/people_ids.txt","w")
+    for i in range(1,6):
 
-        req = requests.get("https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key={api_key}".format(movie_id=int(movie_id),api_key=api_key))
+
+        req = requests.get("https://api.themoviedb.org/3/person/popular?api_key={}&language=en-US&page={}".format(api_key,i))
         response = req.json()
-        
-        crew = response["crew"]
-        for k in crew:
-
-            if (k["job"]) == "Director":
-                #print(k["id"])
-                
-                if (k["id"] not in people_ids):
-                    people_ids.append(k["id"])
-                    break
-        #print("--")
-        
-        cast = response["cast"]
-        if (len(cast)==0):
-            print(movie_id)
-            continue
-        '''
-        for k in range(0,min(15,len(cast))):
-            if (cast[k]["id"] not in people_ids):
-                people_ids.append(cast[k]["id"])
+        #print(response)
+        for k in response["results"]:
+            f.write(str(k["id"])+"\n")
+            top_film_ids.append(k["id"])
+            #print(k["id"])
             
-        '''
-        for k in cast:
-            if (k["id"] not in people_ids):
-                people_ids.append(k["id"])
-        
-        
-    #print(len(people_ids))
-    f.close()
-    f1 = open("./api tests and trials/people_ids.txt","a")
-    for i in people_ids:
-        f1.write(str(i)+"\n")
-    f1.close()
 
-def actors_db():
-    f = open("./api tests and trials/people_ids.txt","r")
-    count = 0
-    for person_id in f:
-        count += 1
+    #print(len(top_film_ids))
+
+
+    f.close()
+    
+
+
+
+
+def add_actor(person_id):
+    try:
+        movie = m.Person.objects.get(personId=int(person_id))
+    except:
+        req = requests.get("https://api.themoviedb.org/3/person/{person_id}?api_key={api_key}&language=en-US".format(person_id=int(person_id),api_key=api_key))
+        response = req.json()
+        birth = response["birthday"]
+        if(birth ==None):
+            birth = datetime(1,1,1)
+            
+        try:
+            path = response["profile_path"]
+        except:
+            path = None    
+        p = m.Person(PersonId=int(person_id),Pname=response["name"],Pbirth=birth,Ppic = path)
+        #print(p)
+        p.save()
+    
+def add_actor_all(person_id,film_limit=30):
+    try:
+        new_person = m.Person.objects.get(PersonId=int(person_id))
+    except:
 
         req = requests.get("https://api.themoviedb.org/3/person/{person_id}?api_key={api_key}&language=en-US".format(person_id=int(person_id),api_key=api_key))
         response = req.json()
+        birth = response["birthday"]
+        if(birth ==None):
+            birth = datetime(1,1,1)
+            
+        try:
+            path = response["profile_path"]
+        except:
+            path = None    
+        new_person = m.Person(PersonId=int(person_id),Pname=response["name"],Pbirth=birth,Ppic = path)
+        #print(new_person)
+        new_person.save()
         
-        if(response["birthday"] == None):
-            continue 
-        #print(response["name"])
-        req = requests.get("https://api.themoviedb.org/3/person/{person_id}/images?api_key={api_key}".format(person_id=int(person_id),api_key=api_key))
-        pic = req.json()
-        #print(pic)
-        pp= None
-        if (0!=len(pic["profiles"])):
-
-            #print(pic["profiles"][0]["file_path"])
-            pp = pic["profiles"][0]["file_path"]
-        p = m.Person(PersonId=int(person_id),Pname=response["name"],Pbirth=response["birthday"],Ppic = pp)
-        #print(p)
-        p.save()
-
-    f.close()
-
-def add_actor(person_id):
-
-    req = requests.get("https://api.themoviedb.org/3/person/{person_id}?api_key={api_key}&language=en-US".format(person_id=int(person_id),api_key=api_key))
+    req = requests.get("https://api.themoviedb.org/3/person/{person_id}/movie_credits?api_key={api_key}&language=en-US".format(person_id=int(person_id),api_key=api_key))
     response = req.json()
-    birth = response["birthday"]
-    if(birth ==None):
-        birth = datetime(1,1,1)
-        
+    crew = response["crew"]
+    #print(crew)
+    for k in crew:
+        if (k["job"]) == "Director":
+            add_movie(k["id"])
+            break
+    cast = response["cast"]
+    #print(cast)
+    count = 0
+    for k in cast:
+        if(count >= film_limit):
+            break
+        count += 1
+        add_movie(k["id"],new_person)    
+
+def add_movie(movie_id,person=None):
     try:
-        path = response["profile_path"]
+        movie = m.Movie.objects.get(movieID=int(movie_id))
     except:
-        path = None    
-    p = m.Person(PersonId=int(person_id),Pname=response["name"],Pbirth=birth,Ppic = path)
-    print(p)
-    p.save()
-    
+        try:
+            #print(movie_id,person)
+            
+            req = requests.get("https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key={api_key}".format(movie_id=int(movie_id),api_key=api_key))
+            response = req.json()
+            crew = response["crew"]
+            director = None
+            for k in crew:
+                if (k["job"]) == "Director":
+                    try:
+                        director = m.Person.objects.get(PersonId=k["id"])
+                    except :
+                        #print("direstor not found",k["id"],movie_id)
+                        add_actor(k["id"])
+                        #director=None
+                        director = m.Person.objects.get(PersonId=k["id"])
+                    break
+            if ( director==None):
+                return
+            cast_ids=[]
+            cast = response["cast"]
+            for k in cast:
+                cast_ids.append(k["id"])
+            req = requests.get("https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}".format(movie_id=int(movie_id),api_key=api_key))
+            response = req.json()
+            genres = []
+            temp = response["genres"]
+            for i in temp:
+                genres.append(i["name"])
+            name = response["original_title"]
+            path = response["poster_path"]
+            date = response["release_date"]
+            date = date.split("-")[0]
+            new_movie =m.Movie(movieID = movie_id,movieName = name,movieYear = date,directorID = director,Mpic = path)
+            new_movie.save()
 
-def movies_db():#movies casting categories
-    #all_people = m.Person.objects.all()
-    #all_genre = m.Genre.objects.all()
-    f = open("./api tests and trials/film_ids.txt","r")
+            
+            for genre_name in genres:
+                genre = m.Genre.objects.get(genreName=genre_name)
+                new_category = None
+                new_category = m.Category(movieID =new_movie, genreID = genre)
+                #print(new_category.movieID,new_category.genreID)
+                new_category.save()
+            
 
-    for movie_id in f:
-    #movie_id = 278
-    
-        req = requests.get("https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key={api_key}".format(movie_id=int(movie_id),api_key=api_key))
-        response = req.json()
+            if (person!=None):
+                new_cast = None
+            
+                new_cast = m.Casting(personID=person,movieID=new_movie)
+                new_cast.save()
+        except:
+            return
+
+def delete_people():
+    people = m.Person.objects.all()
+    #print(genres)
+    for person in people:
+        #print(genre)
+        person.delete()    
         
-        crew = response["crew"]
-        for k in crew:
-            if (k["job"]) == "Director":
-                try:
-                    director = m.Person.objects.get(PersonId=k["id"])
-                except :
-                    print("direstor not found",k["id"],movie_id)
-                    add_actor(k["id"])
-                    #director=None
-                    director = m.Person.objects.get(PersonId=k["id"])
+def delete_movies():
+    movies = m.Movie.objects.all()
+    #print(genres)
+    for movie in movies:
+        #print(genre)
+        movie.delete()
+
+def add_movie_credits(movie_id,cast_limit=50):
+    try:
+        try: 
+            new_movie = m.Movie.objects.get(movieID=int(movie_id))
+            
+        except:
+            add_movie(movie_id)
+            new_movie = m.Movie.objects.get(movieID=int(movie_id))
+        
+        req = requests.get("https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key={api_key}".format(movie_id=int(movie_id),api_key=api_key))
+        response = req.json()        
         
         cast_ids=[]
         cast = response["cast"]
-        for k in cast:
+        #print(cast)
+        for k in cast[:cast_limit]:
             cast_ids.append(k["id"])
-        req = requests.get("https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}".format(movie_id=int(movie_id),api_key=api_key))
-        response = req.json()
-        genres = []
-        temp = response["genres"]
-        for i in temp:
-            genres.append(i["name"])
-        name = response["original_title"]
-        path = response["poster_path"]
-        date = response["release_date"]
-        date = date.split("-")[0]
-        new_movie =m.Movie(movieID = movie_id,movieName = name,movieYear = date,directorID = director,Mpic = path)
-        new_movie.save()
-        #print(new_movie)
-        #print(cast_ids)
-        #print(genres)
-        for genre_name in genres:
-            genre = m.Genre.objects.get(genreName=genre_name)
-            new_category = None
-            new_category = m.Category(movieID =new_movie, genreID = genre)
-            #print(new_category.movieID,new_category.genreID)
-            new_category.save()
-        order = 0
         for cast_id in cast_ids:
+            #print(cast_id)
             new_cast = None
+            
             try:
                 actor = m.Person.objects.get(PersonId = cast_id)
                 
             except :
-                print("actor not found ", cast_id,movie_id)
-                continue
-            order += 1
-            new_cast = m.Casting(order=order,personID=actor,movieID=new_movie)
+                #print("actor not found ", cast_id,movie_id)
+                add_actor(cast_id)
+                actor = m.Person.objects.get(PersonId = cast_id)
+                #continue
+            #order += 1
+            new_cast = m.Casting(personID=actor,movieID=new_movie)
             new_cast.save()
-        print(int(movie_id)," done")
-    f.close()
+        #print(int(movie_id)," done")
+    except:
+        return
+
+def all_movies():
+    f = open("./api tests and trials/film_ids.txt","r")
+    for movie_id in f:
+        #print(int(movie_id))
+        add_movie_credits(int(movie_id),30)
+    f.close
+
+def all_people():
+    f = open("./api tests and trials/people_ids.txt","r")
+    for person_id in f:
+        add_actor_all(int(person_id))
+        
+    f.close
 
 if __name__ == '__main__':
-    """
-    try:
-        p = m.Person.objects.get(PersonId=504)
-    except :
-       p=None
-    #print(p)
+    delete_movies()
+    delete_people()
+    all_genres(delete=True)
+
     
-    req = requests.get("https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}".format(movie_id=int(278),api_key=api_key))
-    response = req.json()
-    name = response["original_title"]
-    path = response["poster_path"]
-    date = response["release_date"]
-    date = date.split("-")[0]
-    print(date)
-    """
-    #all_genres()
-    #actors_db()
-    movies_db()
-    #test = m.Movie(movieID = 666,movieName = "testt",movieYear = 1998,directorID = None,Mpic = "dfgdegd")
-    #print(test)
-    #add_actor(2436936)
+    all_movies()
+    all_people()
