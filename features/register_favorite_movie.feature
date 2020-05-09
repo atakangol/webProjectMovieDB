@@ -8,10 +8,7 @@ I want to register the favorite movies whit its name.
 
   Scenario: Register just movie name
     Given I login as user "user" with password "password"
-    When I register movie
-#      | pName             |
-#      | Joaquin Phoenix   |
-#    Then I'm viewing the details page for movies
-#      | movieName | favoriteCharacter |
-#      | Joker     | Joaquin Phoenix   |
-#    And There are 1 movies
+    When I register favorite movie
+      | favActorID        |
+      | Luke Skywalker    |
+    Then There are 1 movies

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+<legend class="border-bottom mb-4">Home</legend>
     {% for movie in movies %}  
         <article class="media content-section">
             <div class="media-body">
@@ -14,7 +15,7 @@
                 <div class="form-group">                      
                     {% if movie.movieID in favorites %}                 
                         <small>
-                            <a class="mr-2" href="/removefavoritefromhome/{{ movie.movieID }}">Remove favorite</a>
+                            <a class="mr-2" href="/removefavorite/{{ movie.movieID }}">Remove favorite</a>
                         </small>
                     {% else %}
                         <small id="fav">

@@ -6,14 +6,18 @@
                 <a class="mr-2">{{ movie.movieName }}</a>
                 <small class="text-muted">{{ movie.movieYear }}</small>
             </div>
+            <a class="article-title">Sinopsis: </a>
             <!--
                 here is where it goes the movie image
                 <h2><a class="article-title" href="movies/movies_detail.html">Image here</a></h2>
             -->            
             <div class="form-group">
-                <small>
-                    <a class="mr-2" href="/addfavorite/{{ movie.movieID }}">+ Favorite</a>      
-                </small>
+                {% if movie.movieID in favorites %}
+                    <small><a class="mr-2" href="/removefavorite/{{ movie.movieID }}">Remove favorite</a></small>
+                {% else %}
+                    <small><a class="mr-2" href="/addfavorite/{{ movie.movieID }}">+ Favorite</a></small>
+                {% endif %}
+                
             </div>
         </div>
     </article>

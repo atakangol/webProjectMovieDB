@@ -10,7 +10,7 @@ def step_impl(context):
 
 @then('I\'m viewing a list containing')
 def step_impl(context):
-    movie_links = context.browser.find_by_css('div#content article div div a')
+    movie_links = context.browser.find_by_css('#content div article div div.article-metadata a')
     for i, row in enumerate(context.table):
         assert row['movieName'] == movie_links[i].text
 

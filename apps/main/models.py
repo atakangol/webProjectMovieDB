@@ -7,7 +7,7 @@ from django.urls.base import reverse
 class Person(models.Model):
     PersonId = models.IntegerField(unique=True)
     Pname = models.CharField(max_length=50)
-    Pbirth = models.DateTimeField()
+    Pbirth = models.DateTimeField(null=True)
     Ppic = models.CharField(null=True, max_length=100)
 
     def __str__(self):

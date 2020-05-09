@@ -10,7 +10,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 
 
-def home(request):
+def HomePage(request):
     movies = Movie.objects.all()
     favorite_movies = Favorite_Movie.objects.filter(userID=request.user.id).values_list('movieID', flat=True)
     context = {
@@ -19,38 +19,52 @@ def home(request):
     }
     return render(request, 'home.html', context)
 
+def MovieDetail(request, pk):
+    movie = Movie.objects.get(pk=pk)
+    favorite_movies = Favorite_Movie.objects.filter(userID=request.user.id).values_list('movieID', flat=True)
+    context = {
+        'movie': movie,
+        'favorites': favorite_movies
+    }
+    return render(request, 'movies/movies_detail.html', context)
+
 
 @login_required
 def FavoriteMovieCreate(request, pk):
-    movie_clicked = Movie.objects.get(pk=pk)
-    form = FavoriteMovieForm(initial={'movieID': movie_clicked,
+    movie = Movie.objects.get(pk=pk)
+    form = FavoriteMovieForm(initial={'movieID': movie,
                                       'userID': request.user})
     form.fields['favActorID'].queryset = Casting.objects.filter(movieID=pk)
     if request.method == 'POST':
         form = FavoriteMovieForm(request.POST)
-        movie_exists = Favorite_Movie.objects.filter(movieID=movie_clicked)
         if form.is_valid():
-            if movie_exists:
-                Favorite_Movie.objects.filter(movieID=movie_clicked).delete()
             form.save()
-            return redirect('/')
+            return redirect('/profile')
     context = {
         'form': form,
-        'movie': movie_clicked
+        'movie': movie
     }
 
     return render(request, 'movies/add_favorite.html', context)
 
-
-# Remove a movie from favorite movies by profile
+def EditFavoriteMovie(request, pk):
+    movie = Movie.objects.get(pk=pk)
+    form = FavoriteMovieForm(initial={'movieID': movie,
+                                      'userID': request.user})
+    form.fields['favActorID'].queryset = Casting.objects.filter(movieID=pk)
+    if request.method == 'POST':
+        form = FavoriteMovieForm(request.POST)
+        if form.is_valid():
+            Favorite_Movie.objects.filter(movieID=movie).delete()
+            form.save()
+            return redirect('/profile')
+    context = {
+        'form': form,
+        'movie': movie
+    }
+    return render(request, 'movies/add_favorite.html', context)
+    
 def RemoveFavoriteMovie(request, pk):
-    movie_clicked = Movie.objects.get(pk=pk)
-    movie_instance = Favorite_Movie.objects.filter(movieID=movie_clicked).delete()
-    return HttpResponseRedirect('/profile')
-
-
-# Remove a movie from favorite movies by homepage
-def RemoveFavoriteMovieFromHome(request, pk):
-    movie_clicked = Movie.objects.get(pk=pk)
-    movie_instance = Favorite_Movie.objects.filter(movieID=movie_clicked).delete()
-    return HttpResponseRedirect('/')
+    movie = Movie.objects.get(pk=pk)
+    movie_instance = Favorite_Movie.objects.filter(movieID=movie).delete()
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

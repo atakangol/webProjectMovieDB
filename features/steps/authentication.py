@@ -1,4 +1,5 @@
 from behave import *
+from datetime import datetime
 
 use_step_matcher("parse")
 
@@ -12,7 +13,11 @@ def step_impl(context):
 @given('Exists a user "{username}" with password "{password}"')
 def step_impl(context, username, password):
     from django.contrib.auth.models import User
+    from apps.main.models import Movie, Person, Casting
     User.objects.create_user(username=username, email='user@example.com', password=password)
+    person=Person.objects.create(PersonId=1, Pname="Luke Skywalker")
+    movie=Movie.objects.create(movieID=1, movieName="Star Wars", movieYear=1977, directorID=person, Mpic="x")
+    Casting.objects.create(movieID=movie, personID=person)
 
 
 @given('I login as user "{username}" with password "{password}"')
