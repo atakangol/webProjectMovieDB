@@ -23,7 +23,7 @@ pypiwin32==223
 python-dateutil==1.5
 pytz==2018.7
 pywin32==227
-requests==2.18.4
+requests==2.20.0
 selenium==3.141.0
 six==1.14.0
 splinter==0.13.0
