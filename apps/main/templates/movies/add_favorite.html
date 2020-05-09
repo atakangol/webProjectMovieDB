@@ -3,9 +3,7 @@
 {% block content %}
 <form method="post" enctype="multipart/form-data" action="">
     {% csrf_token %}
-    <b>
-        <a class="article-title">Adding '{{ movie.movieName }}' to your favorites, but first:</a>
-    </b>
+    <b><a class="article-title">Adding '{{ movie.movieName }}' to your favorites, but first:</a></b>
     {{ form|crispy }}
     <button class="btn btn-outline-info" type="submit" value="addfav">Add to my favorites!</button>
 </form>
