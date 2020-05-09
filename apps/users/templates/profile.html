@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <legend class="border-bottom mb-4">{{ user.username }}</legend>
-    <small class="text-muted">My favorite movies:</small>
+    <a class="mr-2">My favorite movies:</a>
     {% for favorite in favorites %}
         {% for movie in movies %}
             {% if favorite.movieID_id == movie.movieID %}

@@ -51,8 +51,10 @@ def FavoriteMovieCreate(request, pk):
 
 def EditFavoriteMovie(request, pk):
     movie = Movie.objects.get(pk=pk)
+    current_favorite_actor = Favorite_Movie.objects.get(movieID=movie, userID=request.user).favActorID
     form = FavoriteMovieForm(initial={'movieID': movie,
-                                      'userID': request.user})
+                                      'userID': request.user,
+                                      'favActorID': current_favorite_actor})
     form.fields['favActorID'].queryset = Casting.objects.filter(movieID=pk)
     if request.method == 'POST':
         form = FavoriteMovieForm(request.POST)
