@@ -56,6 +56,12 @@ To watch the website you can use the following link:
 
 * [Click here](https://movie-db-web-project.herokuapp.com/)
 
+## Add API information
+
+In order to add the API information to the local database you have to visit the following website:
+
+* [API](http://127.0.0.1:8000/readapi) - Download API information
+
 ## Built With
 
 * [Django](https://www.djangoproject.com/) - The web framework used
