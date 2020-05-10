@@ -4,7 +4,7 @@
     <a class="mr-2">My favorite movies:</a>
     {% for favorite in favorites %}
         {% for movie in movies %}
-            {% if favorite.movieID_id == movie.movieID %}
+            {% if favorite.movieID == movie %}
             <article class="media content-section">
                 <div class="media-body">
                     <div class="article-metadata">
