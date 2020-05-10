@@ -20,7 +20,7 @@ def HomePage(request):
     return render(request, 'home.html', context)
 
 def MovieDetail(request, pk):
-    movie = Movie.objects.get(pk=pk)
+    movie = Movie.objects.get(movieID=pk)
     favorite_movies = Favorite_Movie.objects.filter(userID=request.user.id).values_list('movieID', flat=True)
     context = {
         'movie': movie,
@@ -31,7 +31,7 @@ def MovieDetail(request, pk):
 
 @login_required
 def FavoriteMovieCreate(request, pk):
-    movie = Movie.objects.get(pk=pk)
+    movie = Movie.objects.get(movieID=pk)
     movie_cast = Casting.objects.filter(movieID=pk).first()
     form = FavoriteMovieForm(initial={'movieID': movie,
                                       'userID': request.user,
@@ -50,7 +50,7 @@ def FavoriteMovieCreate(request, pk):
     return render(request, 'movies/add_favorite.html', context)
 
 def EditFavoriteMovie(request, pk):
-    movie = Movie.objects.get(pk=pk)
+    movie = Movie.objects.get(movieID=pk)
     current_favorite_actor = Favorite_Movie.objects.get(movieID=movie, userID=request.user).favActorID
     form = FavoriteMovieForm(initial={'movieID': movie,
                                       'userID': request.user,
@@ -69,6 +69,6 @@ def EditFavoriteMovie(request, pk):
     return render(request, 'movies/add_favorite.html', context)
     
 def RemoveFavoriteMovie(request, pk):
-    movie = Movie.objects.get(pk=pk)
+    movie = Movie.objects.get(movieID=pk)
     movie_instance = Favorite_Movie.objects.filter(movieID=movie).delete()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
