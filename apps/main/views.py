@@ -55,7 +55,7 @@ def EditFavoriteMovie(request, pk):
     form = FavoriteMovieForm(initial={'movieID': movie,
                                       'userID': request.user,
                                       'favActorID': current_favorite_actor})
-    form.fields['favActorID'].queryset = Casting.objects.filter(movieID=movie.movieID)
+    form.fields['favActorID'].queryset = Casting.objects.filter(movieID=movie)
     if request.method == 'POST':
         form = FavoriteMovieForm(request.POST)
         if form.is_valid():

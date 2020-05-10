@@ -13,7 +13,7 @@
                     <h2><a class="article-title" href="movies/movies_detail.html">Image here</a></h2>
                 -->                
                 <div class="form-group">                      
-                    {% if movie.movieID in favorites %}                 
+                    {% if movie.id in favorites %}                 
                         <small>
                             <a class="mr-2" href="/removefavorite/{{ movie.movieID }}">Remove favorite</a>
                         </small>
