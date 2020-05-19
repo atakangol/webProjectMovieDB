@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
+<span  vocab="http://schema.org/" typeof="Movie">
     <article class="media content-section">
         <div class="media-body">
             <div class="article-metadata">
-                <b><a class="mr-2">{{ movie.movieName }}</a></b>
-                <small class="text-muted">{{ movie.movieYear }}</small>
+                <span property="name"> <b><a class="mr-2">{{ movie.movieName }}</a></b> </span>
+                <span property="datePublished"><small class="text-muted">{{ movie.movieYear }}</small></span>
             </div>
             <a class="article-title">Sinopsis: </a>
             <!--
@@ -21,4 +22,5 @@
             </div>
         </div>
     </article>
+</span>
 {% endblock %}
