@@ -7,11 +7,7 @@
                 <span property="name"> <b><a class="mr-2">{{ movie.movieName }}</a></b> </span>
                 <span property="datePublished"><small class="text-muted">{{ movie.movieYear }}</small></span>
             </div>
-            <a class="article-title">Sinopsis: </a>
-            <!--
-                here is where it goes the movie image
-                <h2><a class="article-title" href="movies/movies_detail.html">Image here</a></h2>
-            -->            
+            <img src="https://image.tmdb.org/t/p/original/{{movie.Mpic}}" width="200" height="300">           
             <div class="form-group">
                 {% if movie.id in favorites %}
                     <small><a class="mr-2" href="/removefavorite/{{ movie.movieID }}">Remove favorite</a></small>

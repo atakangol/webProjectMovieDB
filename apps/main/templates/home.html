@@ -7,11 +7,8 @@
                 <div class="article-metadata">
                     <a class="mr-2" href="/details/{{ movie.movieID }}">{{ movie.movieName }}</a>
                     <small class="text-muted">{{ movie.movieYear }}</small>
-                </div>
-                <!--
-                    here is where it goes the movie image
-                    <h2><a class="article-title" href="movies/movies_detail.html">Image here</a></h2>
-                -->                
+                </div>                
+                <img src="https://image.tmdb.org/t/p/original/{{movie.Mpic}}" width="200" height="300">
                 <div class="form-group">                      
                     {% if movie.id in favorites %}                 
                         <small>
