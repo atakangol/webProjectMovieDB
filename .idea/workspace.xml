@@ -20,34 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d35ce98-8b7f-4b66-a5b9-7a128f87622c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webProjectMovieDB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webProjectMovieDB.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/main/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/main/templates/movies/movies_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/main/templates/movies/movies_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/easy_install" beforeDir="false" afterPath="$PROJECT_DIR$/bin/easy_install" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/easy_install-3.6" beforeDir="false" afterPath="$PROJECT_DIR$/bin/easy_install-3.6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/easy_install3" beforeDir="false" afterPath="$PROJECT_DIR$/bin/easy_install3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pip" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pip-3.6" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pip-3.6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pip3" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pip3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pip3.6" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pip3.6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/python3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/python3.6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/wheel" beforeDir="false" afterPath="$PROJECT_DIR$/bin/wheel" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/wheel-3.6" beforeDir="false" afterPath="$PROJECT_DIR$/bin/wheel-3.6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/wheel3" beforeDir="false" afterPath="$PROJECT_DIR$/bin/wheel3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/python3.6/site-packages/pip/_vendor/distlib/t32.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lib/python3.6/site-packages/pip/_vendor/distlib/t32.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/python3.6/site-packages/pip/_vendor/distlib/t64.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lib/python3.6/site-packages/pip/_vendor/distlib/t64.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/python3.6/site-packages/pip/_vendor/distlib/w32.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lib/python3.6/site-packages/pip/_vendor/distlib/w32.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/python3.6/site-packages/pip/_vendor/distlib/w64.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lib/python3.6/site-packages/pip/_vendor/distlib/w64.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/python3.6/site-packages/setuptools/cli-32.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lib/python3.6/site-packages/setuptools/cli-32.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/python3.6/site-packages/setuptools/cli-64.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lib/python3.6/site-packages/setuptools/cli-64.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/python3.6/site-packages/setuptools/cli.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lib/python3.6/site-packages/setuptools/cli.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/python3.6/site-packages/setuptools/gui-32.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lib/python3.6/site-packages/setuptools/gui-32.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/python3.6/site-packages/setuptools/gui-64.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lib/python3.6/site-packages/setuptools/gui-64.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/python3.6/site-packages/setuptools/gui.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lib/python3.6/site-packages/setuptools/gui.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +47,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -152,9 +129,10 @@
     </state>
     <state x="805" y="1229" width="424" height="484" key="FileChooserDialogImpl/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588665164838" />
     <state x="542" y="171" width="424" height="513" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1589383425847" />
-    <state x="514" y="1107" key="SettingsEditor" timestamp="1588690331386">
-      <screen x="306" y="1080" width="1366" height="768" />
+    <state x="461" y="1107" key="SettingsEditor" timestamp="1590090826974">
+      <screen x="253" y="1080" width="1366" height="768" />
     </state>
+    <state x="461" y="1107" key="SettingsEditor/253.1080.1366.768/320.0.1600.1080@253.1080.1366.768" timestamp="1590090826974" />
     <state x="514" y="1107" key="SettingsEditor/306.1080.1366.768/373.0.1547.1080@306.1080.1366.768" timestamp="1588690331386" />
     <state x="373" y="303" width="618" height="777" key="find.popup" timestamp="1588454864010">
       <screen x="373" y="0" width="1547" height="1080" />
